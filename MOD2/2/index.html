@@ -14,8 +14,8 @@
 
     <script>
 
-            var Btn = document.getElementById("botao");
-        var Esp = document.getElementById("espaco");
+            var Botau = document.getElementById("botao");
+        var Espaco = document.getElementById("espaco");
         function getRandomColor() {
             var letters = "0123456789ABCDEF";
             var color = "#";
@@ -23,6 +23,16 @@
                 color += letters[Math.floor(Math.random() * 16)];
             }
             return color;
+
+            Botau.onclick = function () {
+            var EspacoE = document.createElement("div");
+            EspacoE.style.backgroundColor = "#F00";
+            EspacoE.style.borderColor = "##000000";
+            EspacoE.style.width = "100px";
+            EspacoE.style.height = "100px";
+            EspacoE.style.borderStyle = "solid";
+            EspacoE.style.borderBottomWidth = "0.5px";
+            Espaco.appendChild(EspacoE);
 
     </script>
 </body>
