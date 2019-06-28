@@ -21,6 +21,7 @@
         var listElement = document.querySelector("#app ul")
         var inputElement = document.querySelector("#app input")
         var buttonElement = document.querySelector("#app button")
+        var todos = JSON.parse(localStorage.getItem("listar_todos")) || [];
 
         function render() {
         listElement.innerHTML = "";
@@ -66,7 +67,10 @@
         render();
          saveToStorage();
         } 
+    }
 
+        function saveToStorage() {
+        localStorage.setItem("listar_todos", JSON.stringify(todos));
 
         
         </script>
