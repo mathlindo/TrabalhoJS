@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script src="todo.js">
+        
+        function checaIdade(anos) {
+        return new Promise(function(autorizado, rejeitado) {
+      setTimeout(function() {
+        return anos >= 18 ? resolve() : rejeita();
+      }, 2000);
+    });
+  } 
+        
+}
+
+            checaIdade(20)
+            .then(function() {
+            console.log("Maior 18");
+            })
+            .catch(function() {
+            console.log("Menor 18");
+            }); 
+
+        </script>
+</body>
+</html>
