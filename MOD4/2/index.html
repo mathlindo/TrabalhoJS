@@ -17,6 +17,23 @@
         var listElement = document.querySelector('ul');
         var inputElement = document.querySelector('input');
         
+
+        function renderRepositorios(repositor) {
+     for (repo of repositor) {
+      const textElement = document.createTextNode(repo.name);
+      const liElement = document.createElement('li');
+      liElement.appendChild(textElement);
+      listElement.appendChild(liElement);
+    }
+  } 
+
+    function listRepositorios() {
+    var a = inputElement.value;
+    if (!a) return;
+    axios.get('https://api.github.com/users/' + a + '/repos')
+      .then(function (response) {
+        renderRepositorios(response.data);
+      })
         </script>
 
         
